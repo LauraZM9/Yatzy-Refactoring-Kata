@@ -9,7 +9,7 @@ class Yatzy
     @dice[4] = _5
   end
   
-  def chance(d1, d2, d3, d4, d5)
+  def chance
     total = 0
     total += @dice[0]
     total += @dice[1]
