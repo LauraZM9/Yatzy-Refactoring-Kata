@@ -2,7 +2,7 @@ require_relative 'yatzy'
 require 'test/unit'
 
 class YatzyTest < Test::Unit::TestCase
-  def test_chance_scores_sum_of_all_dice_case1
+  def test_chance_scores_sum_of_all_dice
     assert 15 == Yatzy.chance(2,3,4,5,1)
     assert 16 == Yatzy.chance(3,3,4,5,1)
   end
@@ -10,6 +10,9 @@ class YatzyTest < Test::Unit::TestCase
   def test_yatzy_scores_50
     assert 50 == Yatzy.yatzy([4,4,4,4,4])
     assert 50 == Yatzy.yatzy([6,6,6,6,6])
+  end
+
+  def test_yatzy_scores_0_on_diff_numbers
     assert 0 == Yatzy.yatzy([6,6,6,6,3])
   end
 
