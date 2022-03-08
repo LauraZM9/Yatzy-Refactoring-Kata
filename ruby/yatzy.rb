@@ -10,13 +10,7 @@ class Yatzy
   end
   
   def chance
-    total = 0
-    total += @dice[0]
-    total += @dice[1]
-    total += @dice[2]
-    total += @dice[3]
-    total += @dice[4]
-    return total
+    return @dice.sum
   end
 
   def self.yatzy(dice)
